@@ -1,16 +1,5 @@
 [
 {
-  "id": "deprecated/bower-api",
-  "title": "Bower API",
-  "url": "/deprecated/bower-api",
-  "category": "JavaScript libraries",
-  "keywords": null,
-  "content_html": "<pre><code class=\"language-js\">require('bower').config\n</code></pre>\n\n<pre><code class=\"language-js\">{ cwd: '/Users/rsc',\n  directory: 'bower_components',\n  registry:\n   { search: [ 'https://bower.herokuapp.com' ],\n     register: 'https://bower.herokuapp.com',\n     publish: 'https://bower.herokuapp.com' },\n  shorthandResolver: 'git://github.com//.git',\n  tmp: '/var/folders/5y/190gjd_j2c5bfkn563dk2xdr0000gn/T/rsc/bower',\n  timeout: 30000,\n  ca: { search: [] },\n  strictSsl: true,\n  userAgent: 'node/v0.10.33 darwin x64',\n  color: true,\n  storage:\n   { packages: '/Users/rsc/.cache/bower/packages',\n     links: '/Users/rsc/.local/share/bower/links',\n     completion: '/Users/rsc/.local/share/bower/completion',\n     registry: '/Users/rsc/.cache/bower/registry',\n     empty: '/Users/rsc/.local/share/bower/empty' },\n  interactive: false,\n  argv: { remain: [], cooked: [], original: [] } }\n</code></pre>",
-  "intro_html": "",
-  "description_html": "",
-  "tags": null,
-  "updated": null
-},{
   "id": "fitness/general",
   "title": "General fitness notes",
   "url": "/fitness/general",
@@ -20,17 +9,6 @@
   "intro_html": "",
   "description_html": "",
   "tags": null,
-  "updated": null
-},{
-  "id": "wip/intl-datetime",
-  "title": "Intl.DateTimeFormat",
-  "url": "/wip/intl-datetime",
-  "category": "Hidden",
-  "keywords": null,
-  "content_html": "<h3 id=\"parsing\">Parsing</h3>\n\n<h4 id=\"as-local-time\">As local time</h4>\n\n<pre><code class=\"language-js\">const date = new Date(2012, 11, 20, 3, 0, 0)\n</code></pre>\n\n<h4 id=\"as-utc-time\">As UTC time</h4>\n\n<pre><code class=\"language-js\">const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0))\n</code></pre>\n\n<h4 id=\"from-iso-strings\">From ISO strings</h4>\n\n<pre><code class=\"language-js\">const date = new Date('2018-04-20T12:00:00Z')\n</code></pre>\n\n<p>Note that JavaScript doesn’t “store” timezones in a date object. All these date objects, when expressed via <code>.toString()</code> or similar, will show the local timezone of the browser, regardless if you parsed UTC dates.</p>\n\n<h3 id=\"formatting-dates\">Formatting dates</h3>\n\n<h4 id=\"default-formatting\">Default formatting</h4>\n\n<pre><code class=\"language-js\">console.log(new Intl.DateTimeFormat().format(date))\n// → '12/19/2012' (assuming America/Los_Angeles)\n</code></pre>\n\n<h4 id=\"custom-locale\">Custom locale</h4>\n\n<pre><code class=\"language-js\">console.log(new Intl.DateTimeFormat('en-GB').format(date))\n// → '19/12/2012' (date-first)\n</code></pre>\n\n<h4 id=\"custom-timezone\">Custom timezone</h4>\n\n<pre><code class=\"language-js\">console.log(new Intl.DateTimeFormat('en-AU', {\n  timeZone: 'Australia/Sydney'\n}).format(date))\n// → '19/12/2012'\n</code></pre>\n\n<h3 id=\"custom-formats\">Custom formats</h3>\n\n<h4 id=\"time\">Time</h4>\n\n<pre><code class=\"language-js\">console.log(new Intl.DateTimeFormat('default', {\n  hour: 'numeric',\n  minute: 'numeric',\n  second: 'numeric'\n}).format(date))\n// → '2:00:00 pm'\n</code></pre>\n\n<h4 id=\"date\">Date</h4>\n\n<pre><code class=\"language-js\">console.log(new Intl.DateTimeFormat('en-US', {\n  year: 'numeric',\n  month: 'numeric',\n  day: 'numeric'\n}).format(date))\n// → '12/19/2012'\n</code></pre>\n\n<p>To specify options without a locale, use <code>'default'</code> as a locale.</p>\n\n<h3 id=\"all-options\">All options</h3>\n\n<pre><code class=\"language-js\">{\n  weekday: 'narrow' | 'short' | 'long',\n  era: 'narrow' | 'short' | 'long',\n  year: 'numeric' | '2-digit',\n  month: 'numeric' | '2-digit' | 'narrow' | 'short' | 'long',\n  day: 'numeric' | '2-digit',\n  hour: 'numeric' | '2-digit',\n  minute: 'numeric' | '2-digit',\n  second: 'numeric' | '2-digit',\n  timeZoneName: 'short' | 'long',\n\n  // Time zone to express it in\n  timeZone: 'Asia/Shanghai',\n  // Force 12-hour or 24-hour\n  hour12: true | false,\n\n  // Rarely-used options\n  hourCycle: 'h11' | 'h12' | 'h23' | 'h24',\n  formatMatcher: 'basic' | 'best fit'\n}\n</code></pre>\n\n<h2 id=\"references\">References</h2>\n\n<ul>\n  <li><a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat\">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat</a></li>\n</ul>",
-  "intro_html": "<p><code>Intl.DateTimeFormat</code> is used to format date strings in JavaScript.</p>",
-  "description_html": "",
-  "tags": ["WIP"],
   "updated": null
 },{
   "id": "fitness/micronutrients",
@@ -54,17 +32,6 @@
   "description_html": "",
   "tags": null,
   "updated": "2017-08-30"
-},{
-  "id": "wip/php",
-  "title": "PHP",
-  "url": "/wip/php",
-  "category": "PHP",
-  "keywords": null,
-  "content_html": "<h3 id=\"hello-world\">Hello world</h3>\n\n<h4 id=\"hellophp\">hello.php</h4>\n\n<pre><code class=\"language-php\">&lt;?php\nfunction greetMe($name): string\n{\n    return \"Hello, \" . $name . \"!\";\n}\n\n$message = greetMe($name);\necho $message;\n</code></pre>\n\n<p>All PHP files start with <code>&lt;?php</code>.</p>\n\n<p>See: <a href=\"https://php.net/manual/en/language.basic-syntax.phptags.php\">PHP tags</a></p>\n\n<h3 id=\"objects\">Objects</h3>\n\n<pre><code class=\"language-php\">&lt;?php\n\n$fruitsArray = array(\n    \"apple\" =&gt; 20,\n    \"banana\" =&gt; 30\n);\necho $fruitsArray['banana'];\n</code></pre>\n\n<p>Or cast as object</p>\n\n<pre><code class=\"language-php\">&lt;?php\n\n$fruitsObject = (object) $fruits;\necho $fruitsObject-&gt;banana;\n</code></pre>\n\n<h3 id=\"inspecting-objects\">Inspecting objects</h3>\n\n<pre><code class=\"language-php\">&lt;?php\nvar_dump($object)\n</code></pre>\n\n<p>Prints the contents of a variable for inspection.</p>\n\n<p>See: <a href=\"https://php.net/var_dump\">var_dump</a></p>\n\n<h3 id=\"classes\">Classes</h3>\n\n<pre><code class=\"language-php\">class Person\n{\n    public $name = '';\n}\n\n$person = new Person();\n$person-&gt;name = 'bob';\n\necho $person-&gt;name;\n</code></pre>\n\n<h3 id=\"getters-and-setters\">Getters and setters</h3>\n\n<pre><code class=\"language-php\">class Person \n{\n    private $name = '';\n\n    public function getName(): string\n    {\n        return $this-&gt;name;\n    }\n\n    public function setName(string $name)\n    {\n        $this-&gt;name = $name;\n        return $this;\n    }\n}\n\n$person = new Person();\n$person-&gt;setName('bob');\n\necho $person-&gt;getName();\n</code></pre>\n\n<h3 id=\"isset-vs-empty\">isset vs empty</h3>\n<pre><code class=\"language-php\">\n$options = [\n    'key' =&gt; 'value',\n    'blank' =&gt; '',\n    'nothing' =&gt; null,\n];\n\nvar_dump(isset($options['key']), empty($options['key'])); // true, false\nvar_dump(isset($options['blank']), empty($options['blank'])); // true, true\nvar_dump(isset($options['nothing']), empty($options['nothing'])); // false, true\n</code></pre>",
-  "intro_html": "",
-  "description_html": "",
-  "tags": null,
-  "updated": null
 },{
   "id": "assets/css/style.css",
   "title": null,

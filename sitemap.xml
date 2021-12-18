@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://cheatsheet.ender503.dev/</loc></url>
-<url><loc>https://cheatsheet.ender503.dev/deprecated/bower-api</loc></url>
 <url><loc>https://cheatsheet.ender503.dev/fitness/general</loc></url>
-<url><loc>https://cheatsheet.ender503.dev/wip/intl-datetime</loc></url>
 <url><loc>https://cheatsheet.ender503.dev/fitness/micronutrients</loc></url>
 <url><loc>https://cheatsheet.ender503.dev/fitness/phat</loc></url>
-<url><loc>https://cheatsheet.ender503.dev/wip/php</loc></url>
 <url><loc>https://cheatsheet.ender503.dev/assets/css/style.css</loc></url>
 <url><loc>https://cheatsheet.ender503.dev/redirects.json</loc></url>
 
