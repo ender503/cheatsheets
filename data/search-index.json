@@ -33,6 +33,17 @@
   "tags": null,
   "updated": "2017-08-30"
 },{
+  "id": "traefik",
+  "title": "Traefik",
+  "url": "/traefik",
+  "category": "Node.js",
+  "keywords": null,
+  "content_html": "<h3 id=\"basic\">Basic</h3>\n\n<pre><code class=\"language-yaml\">version: '2'\n\nservices:\n  traefik:\n    image: traefik:v2.5\n    restart: unless-stopped\n    command:\n      - '--providers.docker.exposedByDefault=false'\n      - '--entryPoints.web.address=:80'\n    ports:\n      - 80:80\n    volumes:\n      - /var/run/docker.sock:/var/run/docker.sock:ro\n\n  nginx:\n    image: nginx:lts-alpine\n    restart: unless-stopped\n    labels:\n      - traefik.enable=true\n      - traefik.http.routers.portal-nginx.entrypoints=web\n      - traefik.http.routers.portal-nginx.rule=PathPrefix(`/`)\n      - traefik.http.services.portal-nginx.loadbalancer.server.port=80\n</code></pre>\n\n<p data-line=\"13\">Highlighted lines are required.</p>",
+  "intro_html": "",
+  "description_html": "",
+  "tags": null,
+  "updated": "2021-12-22"
+},{
   "id": "assets/css/style.css",
   "title": null,
   "url": "/assets/css/style.css",
