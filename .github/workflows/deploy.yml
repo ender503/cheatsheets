@@ -1,5 +1,5 @@
 name: Deploy
-on: 
+on:
   push:
     branches:
       master
@@ -66,14 +66,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: _site
-
-      - name: "Deploy to mirror 🚀"
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          REPOSITORY_NAME: rstacruz/devhints-mirror
           BRANCH: gh-pages
           FOLDER: _site
 
